@@ -9,10 +9,9 @@ body {
     height: 100vh;
     margin: 0;
     opacity: 0;
-    animation: fadeInBody 1s ease forwards; /* Animasi untuk body */
+    animation: fadeInBody 1s ease forwards;
 }
 
-/* Animasi untuk body agar masuk secara perlahan */
 @keyframes fadeInBody {
     0% {
         opacity: 0;
@@ -29,7 +28,6 @@ body {
     height: 100%;
 }
 
-/* Animasi untuk profile-card */
 .profile-card {
     background: rgba(255, 255, 255, 0.1);
     border-radius: 10px;
@@ -45,23 +43,21 @@ body {
     flex-direction: row; 
     position: relative;
     align-items: center;
-    opacity: 0; /* Mulai tidak terlihat */
+    opacity: 0; 
     animation: slideIn 1s ease-out forwards; /* Animasi masuk profile card */
 }
 
-/* Animasi slide-in untuk profile card */
 @keyframes slideIn {
     0% {
         opacity: 0;
-        transform: translateY(-50px); /* Profile card dimulai dari atas */
+        transform: translateY(-50px);
     }
     100% {
         opacity: 1;
-        transform: translateY(0); /* Profile card sampai di posisi normal */
+        transform: translateY(0);
     }
 }
 
-/* Profile Image Styling dengan Border Shadow */
 .profile-img-container {
     flex-shrink: 0;
     margin-right: 15px;
@@ -80,16 +76,15 @@ body {
     border: 3px solid #00bcd4;
     transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
     filter: grayscale(30%);
-    box-shadow: 0 0 15px #00bcd4, 0 0 30px rgba(0, 188, 212, 0.5); /* Shadow tambahan */
+    box-shadow: 0 0 15px #00bcd4, 0 0 30px rgba(0, 188, 212, 0.5);
 }
 
 .profile-img:hover {
     transform: scale(1.1);
     filter: grayscale(0%);
-    box-shadow: 0 0 20px #00bcd4, 0 0 40px rgba(0, 188, 212, 0.7); /* Shadow lebih besar saat hover */
+    box-shadow: 0 0 20px #00bcd4, 0 0 40px rgba(0, 188, 212, 0.7);
 }
 
-/* Profile Info Styles */
 .profile-info {
     display: flex;
     flex-direction: column;
