@@ -1,0 +1,181 @@
+/* Global Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #1a1a1a;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    opacity: 0;
+    animation: fadeInBody 1s ease forwards; /* Animasi untuk body */
+}
+
+/* Animasi untuk body agar masuk secara perlahan */
+@keyframes fadeInBody {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+/* Animasi untuk profile-card */
+.profile-card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    width: 90%;
+    max-width: 500px;
+    padding: 15px;
+    display: flex;
+    text-align: left;
+    backdrop-filter: blur(10px);
+    border: 2px solid #303030;
+    background-clip: padding-box;
+    flex-direction: row; 
+    position: relative;
+    align-items: center;
+    opacity: 0; /* Mulai tidak terlihat */
+    animation: slideIn 1s ease-out forwards; /* Animasi masuk profile card */
+}
+
+/* Animasi slide-in untuk profile card */
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px); /* Profile card dimulai dari atas */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* Profile card sampai di posisi normal */
+    }
+}
+
+/* Profile Image Styling dengan Border Shadow */
+.profile-img-container {
+    flex-shrink: 0;
+    margin-right: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    position: relative;
+}
+
+.profile-img {
+    width: 140px;
+    height: 170px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 3px solid #00bcd4;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+    filter: grayscale(30%);
+    box-shadow: 0 0 15px #00bcd4, 0 0 30px rgba(0, 188, 212, 0.5); /* Shadow tambahan */
+}
+
+.profile-img:hover {
+    transform: scale(1.1);
+    filter: grayscale(0%);
+    box-shadow: 0 0 20px #00bcd4, 0 0 40px rgba(0, 188, 212, 0.7); /* Shadow lebih besar saat hover */
+}
+
+/* Profile Info Styles */
+.profile-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    flex-grow: 1;
+    margin-top: -5px;
+}
+
+.name {
+    font-size: 20px;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 5px;
+}
+
+.job-title {
+    font-size: 14px;
+    color: #ddd;
+    margin-bottom: 8px;
+}
+
+.description {
+    font-size: 12px;
+    color: #bbb;
+    margin-bottom: 12px;
+}
+
+.skills-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 5px;
+}
+
+.skills {
+    font-size: 12px;
+    color: #bbb;
+    margin-bottom: 5px;
+}
+
+.progress-bar-container {
+    width: 100%;
+    background-color: #444;
+    border-radius: 10px;
+    height: 6px;
+    margin-bottom: 15px;
+}
+
+.progress-bar {
+    height: 100%;
+    background-color: #00bcd4;
+    border-radius: 10px;
+    width: 100%;
+    animation: progress 3s ease-out forwards;
+}
+
+@keyframes progress {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+}
+
+.social-icon {
+    transition: transform 0.3s ease;
+    text-decoration: none;
+}
+
+.icon-img {
+    width: 18px;
+    height: 18px;
+    object-fit: contain;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.social-icon:hover .icon-img {
+    transform: scale(1.2);
+}
